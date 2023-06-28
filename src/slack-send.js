@@ -18,6 +18,8 @@ module.exports = async function slackSend(core) {
   try {
     const botToken = process.env.SLACK_BOT_TOKEN;
     const webhookUrl = process.env.SLACK_WEBHOOK_URL;
+    console.log('bot token length', botToken.length);
+    console.log('webhook URL length', webhookUrl.length);
     let webhookType = SLACK_WEBHOOK_TYPES.WORKFLOW_TRIGGER;
 
     if (process.env.SLACK_WEBHOOK_TYPE) {
